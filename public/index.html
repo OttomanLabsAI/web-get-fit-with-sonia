@@ -20,8 +20,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/oswald-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/open-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/demo-bar.css?v=1.3">
 <link rel="stylesheet" href="/fonts/fonts.css?v=1.1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1.2">
+<link rel="stylesheet" href="/assets/css/site.css?v=1.3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,12 +61,17 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<nav id="pitch-bar" aria-label="Demo pages">
+  <span class="pitch-chip">Demo</span>
+  <a href="/" aria-current="page">New site</a>
+  <a href="/original/">Current site</a>
+  <a href="/improvements/">Improvements</a>
+</nav>
 
 <header class="top no-print">
   <div class="wrap">
     <a class="logo" href="#top"><img src="/assets/img/logo.svg" alt="Get fit with Sonia, top of page" width="182" height="68"></a>
     <nav class="nav" aria-label="Sections">
-      <a class="nav__tab" href="/improvements/">Improvements</a>
       <a href="#classes">Classes</a>
       <a href="#timetable">Timetable</a>
       <a href="#venues">Venues</a>
@@ -350,12 +356,12 @@
       <div class="section-head">
         <p class="kicker">In the classes</p>
         <h2>Gallery</h2>
-        <p>A few pictures from Sonia's classes over the years.</p>
+        <p>A few pictures from Sonia's classes over the years. Tap one to see it large.</p>
       </div>
       <ul class="gallery">
-        <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-zumba-gold.jpg"><img src="/assets/img/gallery-zumba-gold.jpg" width="400" height="284" alt="Sonia at the front of a church hall leading a class of adults with their arms out" loading="lazy"></a><figcaption>Zumba Gold in a church hall</figcaption></figure></li>
-        <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-class-hall.jpg"><img src="/assets/img/gallery-class-hall.jpg" width="400" height="284" alt="A busy class mid-routine in a bright hall with a wooden floor" loading="lazy"></a><figcaption>Mid-routine on a weekday morning</figcaption></figure></li>
-        <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-green-team.jpg"><img src="/assets/img/gallery-green-team.jpg" width="400" height="284" alt="A group of regulars in matching green T-shirts posing together in a hall" loading="lazy"></a><figcaption>The regulars in their green T-shirts</figcaption></figure></li>
+        <li class="feature"><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-zumba-gold.jpg"><img src="/assets/img/gallery-zumba-gold.jpg" width="400" height="284" alt="Sonia at the front of a church hall leading a class of adults with their arms out" loading="lazy"></a><figcaption>Zumba Gold in a church hall</figcaption></figure></li>
+        <li class="feature"><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-class-hall.jpg"><img src="/assets/img/gallery-class-hall.jpg" width="400" height="284" alt="A busy class mid-routine in a bright hall with a wooden floor" loading="lazy"></a><figcaption>Mid-routine on a weekday morning</figcaption></figure></li>
+        <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-green-team.jpg"><img src="/assets/img/gallery-green-team.jpg" width="400" height="284" alt="A group of regulars in matching green T-shirts posing together in a hall" loading="lazy"></a><figcaption>The regulars in green</figcaption></figure></li>
         <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-sonia-zumba.jpg"><img src="/assets/img/gallery-sonia-zumba.jpg" width="400" height="284" alt="Sonia in Zumba gear balancing on one leg on a hall stage" loading="lazy"></a><figcaption>Sonia, ready for Zumba</figcaption></figure></li>
         <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-stage.jpg"><img src="/assets/img/gallery-stage.jpg" width="400" height="284" alt="Sonia dancing on a stage in a pink top with balloons at her feet" loading="lazy"></a><figcaption>On stage at a class party</figcaption></figure></li>
         <li><figure><a class="zoom" data-group="gallery" href="/assets/img/gallery-sonia-selfie.jpg"><img src="/assets/img/gallery-sonia-selfie.jpg" width="400" height="284" alt="Sonia smiling in a black and green top" loading="lazy"></a><figcaption>Sonia</figcaption></figure></li>
@@ -363,21 +369,21 @@
 
       <div class="section-head" id="testimonials">
         <p class="kicker">Clients say</p>
-        <h2>What people say</h2>
+        <h2>Testimonials</h2>
       </div>
       <div class="quotes">
         <figure>
-          <span class="tag">Review</span>
+          <span class="tag">Testimonial</span>
           <blockquote><p>Love these classes. I've been attending for 4 months and am really seeing a difference in my fitness and energy levels. Positive coaching from Sonia ensures you get a great workout whichever class you choose.</p></blockquote>
           <figcaption>Teresa Cole</figcaption>
         </figure>
         <figure>
-          <span class="tag">Review</span>
+          <span class="tag">Testimonial</span>
           <blockquote><p>Love your classes Sonia Tonge.</p></blockquote>
           <figcaption>Sonal Shah</figcaption>
         </figure>
         <figure>
-          <span class="tag">Review</span>
+          <span class="tag">Testimonial</span>
           <blockquote><p>Love these classes. Great fun.</p></blockquote>
           <figcaption>Susan Gale</figcaption>
         </figure>

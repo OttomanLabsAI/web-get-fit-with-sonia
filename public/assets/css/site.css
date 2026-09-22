@@ -32,8 +32,8 @@
 @media (min-width: 720px) { :root { --gutter: 24px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 7rem; }
-@media (min-width: 900px) { html { scroll-padding-top: 5.5rem; } }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(7rem + 48px); }
+@media (min-width: 900px) { html { scroll-padding-top: calc(5.5rem + 48px); } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
@@ -94,15 +94,15 @@ strong { font-weight: 600; }
 
 /* Skip link: parked above the viewport until it is focused. */
 .skip {
-  position: absolute; left: 0.5rem; top: 0.5rem; z-index: 100;
-  transform: translateY(-200%);
+  position: absolute; left: 0.5rem; top: calc(48px + 0.5rem); z-index: 100;
+  transform: translateY(-300%);
   background: var(--ink); color: #fff; padding: 0.6rem 1rem;
   border-radius: var(--radius); font-weight: 600;
 }
 .skip:focus { transform: none; }
 
 /* ---------- Header: pinned at every width ---------- */
-.top { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 2px solid var(--ink); }
+.top { position: sticky; top: 48px; z-index: 50; background: var(--bg); border-bottom: 2px solid var(--ink); }  /* 48px = the demo bar */
 .top .wrap {
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 0.5rem 1.25rem; min-height: 64px; padding-top: 0.6rem; padding-bottom: 0.6rem;
@@ -124,11 +124,6 @@ strong { font-weight: 600; }
 }
 .nav a { flex: none; font-weight: 600; font-size: 0.95rem; text-decoration: none; padding: 0.3rem 0; border-bottom: 2px solid transparent; }
 .nav a:hover, .nav a:focus-visible { border-color: var(--accent); }
-.nav__tab {
-  color: var(--accent-dark); border: 2px solid var(--accent-dark) !important; border-radius: 999px;
-  padding: 0.25rem 0.75rem !important; font-size: 0.85rem !important; letter-spacing: 0.02em;
-}
-.nav__tab:hover, .nav__tab:focus-visible, .nav__tab[aria-current="page"] { background: var(--accent-dark); color: var(--dark-ink); }
 @media (min-width: 900px) {
   .top .wrap::after { display: none; }
   .nav { order: 2; flex-basis: auto; margin: 0 0 0 auto; padding: 0; overflow: visible; white-space: normal; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
@@ -313,11 +308,29 @@ strong { font-weight: 600; }
 .about .card { margin-top: 1.75rem; }
 
 /* ---------- Gallery and testimonials ---------- */
-.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0 0 3rem; }
-.gallery li { margin: 0; }
-.gallery figure { margin: 0; border: 2px solid var(--ink); border-radius: var(--radius); overflow: hidden; background: var(--bg); }
-.gallery img { display: block; width: 100%; height: auto; aspect-ratio: 400 / 284; object-fit: cover; }
-.gallery figcaption { padding: 0.5rem 0.8rem; font-size: 0.88rem; color: var(--muted); border-top: 2px solid var(--ink); }
+/* A centred composition: every photo keeps its own proportions, rows share a
+   height, widths fall where they fall, and the rows centre so the sides need
+   not line up. Portrait originals slot in tall beside landscape ones. */
+.gallery {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 1rem; list-style: none; padding: 0; margin: 0 0 3rem;
+}
+.gallery li { --h: 220px; margin: 0; max-width: 100%; }
+.gallery li.feature { --h: 300px; }
+.gallery figure {
+  display: inline-flex; flex-direction: column; margin: 0; max-width: 100%;
+  border: 2px solid var(--ink); border-radius: var(--radius); overflow: hidden; background: var(--bg);
+}
+.gallery a.zoom { max-width: 100%; }
+.gallery img { display: block; height: var(--h); width: auto; max-width: 100%; }
+.gallery figcaption { width: 0; min-width: 100%; box-sizing: border-box; padding: 0.5rem 0.8rem; font-size: 0.88rem; color: var(--muted); border-top: 2px solid var(--ink); }
+@media (min-width: 1100px) { .gallery li { --h: 174px; } .gallery li.feature { --h: 300px; } }  /* two large, four small in one row */
+@media (max-width: 719px) {
+  .gallery li, .gallery li.feature { --h: auto; }
+  .gallery figure, .gallery a.zoom, .gallery img { width: 100%; }
+  .gallery img { height: auto; }
+  .gallery li { width: min(100%, 420px); }
+}
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1rem; }
 .quotes figure { margin: 0; position: relative; background: var(--bg); border: 2px solid var(--ink); border-radius: var(--radius); padding: 1.7rem 1.15rem 1.15rem; display: flex; flex-direction: column; }
 .quotes blockquote { margin: 0 0 0.8rem; }

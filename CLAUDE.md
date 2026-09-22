@@ -10,6 +10,7 @@ The website for Get fit with Sonia (Sonia Tonge, fitness instructor, North Londo
 public/            everything served
   index.html       the whole site on one page
   404.html, login/, register/, improvements/   themed side pages (the last three are noindex)
+  original/        working copy of the old site for the demo bar's Current site tab (noindex)
   assets/css|js|img
   fonts/           self-hosted Oswald and Open Sans
   _headers         security + caching headers
@@ -81,10 +82,11 @@ The content is Sonia's and every fact on it traces to `work/brief.json`, whose
 source since v1.1 is the saved copies of her own pages under `prompt text/`. Do
 not add a price, a session, a claim or a link that the brief cannot source; put
 the gap in the brief's `questions` instead. The social links are still
-unconfirmed. The header and the contact footer stay pinned at every width. The
-Improvements page is a review page for Sonia and can be retired once she has
-signed off (delete `public/improvements/`, its screenshots and the `nav__tab`
-link on every page). When `site.css`, `site.js` or `fonts.css` change, bump
+unconfirmed. The header and the contact footer stay pinned at every width. Every
+page carries the site-pitch demo bar (New site, Current site, Improvements)
+while Sonia reviews; the README's "Demo chrome" section says exactly what to
+remove when the site goes live, including `public/original/`,
+`public/improvements/`, the `/original/*` headers block and the robots lines. When `site.css`, `site.js` or `fonts.css` change, bump
 their `?v=` stamps in every HTML file.
 
 ## Release ledger
@@ -94,3 +96,4 @@ their `?v=` stamps in every HTML file.
 | v1.0 | A new home for Sonia's classes | Everything a new face needs is now on one quick page: the week's classes with venues, postcodes and map links, what each kind of class is like, who Sonia is, and how to get in touch before a first session. It loads fast on a phone, reads clearly, and prints as a one-sheet timetable. |
 | v1.1 | Sonia's own photos, prices and full timetable | The page now wears Sonia's green logo and colours, shows her photo and pictures from her classes, and carries every one of her twelve sessions by name, with prices and three reviews from regulars. Her number and email stay pinned to the bottom of the screen, the header stays in view, Log in and Register buttons are ready for a members' area, and an Improvements tab shows the old site and the new one side by side. |
 | v1.2 | Every photo opens large when tapped | Tap any picture, Sonia's portrait, the gallery or the before-and-after shots, and it opens big with arrows to step through the set and a close button, on phone and desktop alike. The cropped gallery shots are noted for replacement with the full-size originals from the old site. |
+| v1.3 | A demo bar to flick between old and new | Every page now has a bar at the very top with three tabs, the new site, a working copy of the current one, and the Improvements page, so Sonia can flick between them on her phone. The gallery is a centred composition where each photo keeps its own shape, the two group shots run larger, and the testimonial cards say so. |

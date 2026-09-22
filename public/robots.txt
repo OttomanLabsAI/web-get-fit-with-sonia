@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /original/
+Disallow: /improvements/
+Disallow: /login/
+Disallow: /register/
 
 Sitemap: https://www.getfitwithsonia.co.uk/sitemap.xml

@@ -6,6 +6,11 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
+# The copy of the old site keeps its inline styles; scripts stay off and forms cannot submit anywhere.
+/original/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'none'; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+
 # Static assets are safe to cache hard - bump the ?v= stamp in the HTML to bust.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
