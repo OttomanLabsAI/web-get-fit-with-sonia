@@ -1,0 +1,80 @@
+{
+  "client": "get-fit-with-sonia",
+  "captured": "2026-09-22",
+  "note": "The live site (www.getfitwithsonia.co.uk) could not be fetched from the build environment: its host is blocked by the network egress policy, as were archive.org, jina reader, zumba.com, Facebook, LinkedIn, YouTube and the venue websites. Every 'site:' entry below was recovered from search-engine snippets of the site's own pages and is marked accordingly. Nothing on the page comes from anywhere else without being listed here.",
+  "brand": {
+    "colors": { "value": ["#fffdf9", "#1b1619", "#d61f5c", "#f6efe8"], "source": "house-style defaults (site CSS not capturable)", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "display_font": { "value": "Oswald", "source": "house-style default", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "body_font": { "value": "Inter", "source": "house-style default", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "logo": { "value": "none captured; a simple hoop mark is used", "source": "n/a", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "tone": { "value": "warm, plain, local, encouraging", "source": "site:/ (snippet of Sonia's own copy)", "seen": "2026-09-22", "confidence": "confirmed" }
+  },
+  "facts": {
+    "business_name": { "value": "Get fit with Sonia", "source": "site:<title> 'Get fit with Sonia | Health & Fitness Trainer'", "seen": "2026-09-22", "confidence": "confirmed" },
+    "instructor": { "value": "Sonia Tonge, Fitness Instructor", "source": "site:/ snippet; linkedin title", "seen": "2026-09-22", "confidence": "confirmed" },
+    "experience": { "value": "Fitness Instructor for almost 15 years", "source": "site:/ snippet", "seen": "2026-09-22", "confidence": "confirmed" },
+    "class_types": { "value": ["Keep fit", "Zumba", "Legs bums and tums", "Stretch", "Hula hooping", "Chair exercise"], "source": "site:/ snippet", "seen": "2026-09-22", "confidence": "confirmed" },
+    "zumba_gold": { "value": "Sonia runs Zumba and Zumba Gold classes; Zumba Gold described as tailored to active older adults, seniors or beginners, with merengue, salsa, cumbia, flamenco, tango, belly dancing and world rhythms", "source": "pgweb.uk (Palmers Green Community) Ruth Winston Centre article snippet; n21online listing snippet", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "qualifications": { "value": "Qualified gym instructor with a dance background; ZIN member since Aug 2012; licensed to teach Zumba, Zumba Gold, Zumba Kids & Kids Jr., Zumbini", "source": "pgweb.uk snippet (gym instructor, dance background); zumba.com instructor profile snippet (licences, ZIN since Aug 2012)", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "lives_in": { "value": "Lives and works in Winchmore Hill", "source": "n21online business listing snippet", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "email": { "value": "sonia.tonge@gmail.com", "source": "site:/contact/ snippet", "seen": "2026-09-22", "confidence": "confirmed" },
+    "phone": { "value": "+44 7957 971473", "source": "facebook:zumbawithsoniatonge (page contact number, via search snippet); n21online listing (2022) shows the same number", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "first_visit_rule": { "value": "Please call or email before coming to class", "source": "site:/classes-timetable/ snippet (repeated on every entry)", "seen": "2026-09-22", "confidence": "confirmed" },
+    "sonia_quote": { "value": "'I feel like I have a bigger family ... [some] have become good friends ... spreading joy while exercising is an amazing feeling ... feel you have lost your sparkle and want it back, come join us in one of the class. The feel good vibe will rub off on you and you will come back for more'", "source": "site:/ snippets (fragments; ellipses are the snippet's own)", "seen": "2026-09-22", "confidence": "confirmed" },
+    "timetable": {
+      "value": [
+        { "day": "Monday", "time": "9:30-10:15am", "class": null, "venue": "Southgate Methodist Church (corner of The Bourne and Queen Elizabeth Drive), 45 The Bourne, Southgate, N14 6RS" },
+        { "day": "Monday", "time": "12:15-1:00pm", "class": "Keep Fit", "venue": "Ruth Winston Centre, 190 Green Lanes, N13 5UE" },
+        { "day": "Tuesday", "time": "8:45-9:45am", "class": null, "venue": "Southgate Methodist Church, 45 The Bourne, Southgate, N14 6RS" },
+        { "day": "Tuesday", "time": "10:15-11:00am", "class": null, "venue": "Holy Trinity Church Hall, Green Lanes, N21 3RS" },
+        { "day": "Tuesday", "time": "2:30-3:10pm", "class": null, "venue": "United Reformed Church, Armfield Road, EN2 0DH" },
+        { "day": "Wednesday", "time": "10:00-11:00am", "class": "Keep Fit", "venue": "United Reformed Church, 77 Compton Road, N21 3NU" },
+        { "day": "Wednesday", "time": "11:40am-12:40pm", "class": null, "venue": "United Reformed Church, 77 Compton Road, N21 3NU" },
+        { "day": "Thursday", "time": "9:20-10:20am", "class": null, "venue": "Holy Trinity Church Hall - Upstairs Hall, Green Lanes, N21 3RS" },
+        { "day": "Thursday", "time": "11:00-11:40am", "class": null, "venue": "Chipping Barnet Library, 3 Stapylton Road, Barnet EN5 4QT" },
+        { "day": "Friday", "time": "10:00-11:00am", "class": "Keep Fit", "venue": "Grange Park Methodist Church (Orchard Hall), Old Park Ridings, N21 2EU" }
+      ],
+      "source": "site:/classes-timetable/ (search snippets, several queries)",
+      "seen": "2026-09-22",
+      "confidence": "confirmed",
+      "note": "'class': null means the snippet gave the day, time and venue but not the class name; the page shows these as 'Fitness class'. The Armfield Road entry's day came through as Tuesday in one snippet (zumba.com class listing) and without a day in another."
+    },
+    "socials": {
+      "value": {
+        "facebook": "https://www.facebook.com/zumbawithsoniatonge/",
+        "x": "https://x.com/soniatonge",
+        "youtube": "https://www.youtube.com/channel/UCLh9ei0XRq57jIHkjemY0aQ",
+        "instagram": null
+      },
+      "source": "site:/contact/ lists Facebook, X and Instagram (handles not visible in snippet); facebook page title 'Zumba with Sonia | London' carries the phone number above; x.com/soniatonge titled 'Sonia Tonge'; YouTube channel titled 'Get fit with Sonia'",
+      "seen": "2026-09-22",
+      "confidence": "unconfirmed"
+    },
+    "prices": { "value": null, "source": "n21online listing (c. 2022) showed Zumba Gold £6 and Chair Exercise £5 per session at former venues; nothing current found", "seen": "2026-09-22", "confidence": "unconfirmed" }
+  },
+  "conflicts": [
+    { "field": "instagram", "site": "Contact page links to Instagram (handle not visible)", "instagram": "@getfitwithsonia belongs to a different person (Sonia Jhas) and points followers to @soniajhas", "on_page": "omitted", "question": "What is Sonia's Instagram handle? (the link-in-bio that brought this request came from Instagram)" },
+    { "field": "timetable (Ruth Winston Centre, Monday)", "site": "12:15-1:00pm Keep Fit", "pgweb": "Zumba Gold 11:30am-12:15pm in the Davies Room, plus Keep Fit (older article)", "on_page": "site", "question": "Does the Monday 11:30 Zumba Gold at Ruth Winston Centre still run?" },
+    { "field": "timetable (Armfield Road)", "site": "2:30-3:10pm (day not visible in snippet)", "zumba.com": "Tuesday 2:30-3:10pm", "on_page": "Tuesday", "question": "Confirm the Armfield Road class is on Tuesday." },
+    { "field": "prices", "site": "none visible", "listing": "£6 / £5 per session (c. 2022, former venues)", "on_page": "none", "question": "Current price per class, and any concessions or block booking?" }
+  ],
+  "gaps": [
+    "Class name for 7 of the 10 sessions (shown as 'Fitness class').",
+    "Current prices.",
+    "Photos: none could be captured; the page is typographic until Sonia supplies her own.",
+    "Testimonials page text (only Sonia's own words came through).",
+    "Instagram handle.",
+    "Whether the Thursday Chipping Barnet Library session is the library's 'Hula Hoop and Exercise Class' (Barnet Council lists one; not confirmed as Sonia's).",
+    "Term dates / holiday breaks."
+  ],
+  "questions": [
+    "Which class runs at each of the sessions marked 'Fitness class' (Southgate Mon and Tue, Holy Trinity Tue and Thu, Armfield Road Tue, Compton Road Wed 11:40, Chipping Barnet Thu)?",
+    "Is 07957 971473 still the right number to publish?",
+    "What is your Instagram handle, and are x.com/soniatonge and the 'Get fit with Sonia' YouTube channel yours?",
+    "What do classes cost, and is it pay-as-you-go?",
+    "Does the Monday 11:30 Zumba Gold at Ruth Winston Centre still run?",
+    "Please send two or three testimonials from regulars, and any photos you are happy to publish.",
+    "Any holiday or term-time breaks to mention?"
+  ],
+  "photos": []
+}

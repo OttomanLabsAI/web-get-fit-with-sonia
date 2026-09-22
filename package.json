@@ -1,0 +1,14 @@
+{
+  "name": "web-get-fit-with-sonia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Get fit with Sonia - fitness classes in North London. Static site served by Cloudflare Workers.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

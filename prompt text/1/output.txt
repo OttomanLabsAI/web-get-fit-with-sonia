@@ -1,0 +1,27 @@
+The improved site is built, verified and pushed to `claude/website-improvement-lxa3wt`. It is not on `main` yet, so nothing has deployed. Fast-forward `main` when you are happy with it.
+
+**What changed.** The old site spread the timetable, gallery, testimonials, contact and booking across separate pages. The new site puts everything a new face needs on one fast page, in the house style: a hero with the week at a glance and the two ways to reach Sonia, a facts strip, one tab per kind of class, the full Monday-to-Friday timetable with postcodes and map links, an about section with Sonia's credentials and her own words, a card per venue, and a contact band. The classes are keep fit, Zumba and Zumba Gold, legs bums and tums, stretch, hula hooping and chair exercise. The page prints as a one-sheet timetable, marks today's classes, self-hosts its fonts, sends nothing to third parties, ships a strict content-security policy, a sitemap, Open Graph tags and a sharing image, and works without JavaScript.
+
+**How it was verified.** The wrangler dry run passes. The layout verifier sweeps both routes from 320px to 1920px with the real fonts loaded: no overflow, no wrapped single-word headings. axe reports zero accessibility violations on both pages at desktop and phone widths. html-validate is clean. I looked at full-page screenshots at 320px, 390px, 600px, 900px and 1440px, and at the printed PDF.
+
+**What I could not verify.** The live site is blocked by this environment's egress policy, as were the Wayback Machine, Facebook, LinkedIn, YouTube, zumba.com and the venue websites. Every fact was recovered from search-engine snippets of the site's own pages and a few directory listings, and each one is recorded with its source and confidence in `work/brief.json`. No brand colours, logo or photos could be captured, so the page runs on the house defaults and stays typographic until Sonia supplies photos.
+
+**Questions for Sonia before the domain moves:**
+- Which class runs at the seven sessions shown as "Fitness class"? Only the Ruth Winston Centre Monday, Compton Road Wednesday 10am and Grange Park Friday sessions were named Keep Fit in the source.
+- Is 07957 971473 still the right number? It comes from her Facebook page and an older directory listing, not from the site.
+- What is her Instagram handle? The @getfitwithsonia account belongs to a different Sonia, Sonia Jhas, so Instagram is not linked. Are x.com/soniatonge and the "Get fit with Sonia" YouTube channel hers?
+- Current prices, and whether it is pay as you go. Nothing current was public, so the page says to ask.
+- Does the Monday 11:30 Zumba Gold at Ruth Winston Centre still run, and is the Armfield Road class on Tuesday?
+- Two or three testimonials, and any photos she is happy to publish.
+
+**Layout choice.** Skeleton A, the tabbed layout, because Sonia has six distinct classes and a timetable. B would have fitted only if she taught one thing, and C only if the whole job were a booking call.
+
+**To release**, fast-forward and push `main`:
+
+```
+git checkout main && git merge --ff-only claude/website-improvement-lxa3wt && git push origin main
+```
+
+Then connect the repository in the Cloudflare dashboard under Workers and Pages, Create, Import a repository, and add the custom domain. A failed Cloudflare build from before that connection is expected and clears on the next push.
+
+Sources: [Get fit with Sonia home](https://www.getfitwithsonia.co.uk/), [Classes Timetable](https://www.getfitwithsonia.co.uk/classes-timetable/), [Contact](https://www.getfitwithsonia.co.uk/contact/), [Sonia Tonge on zumba.com](https://www.zumba.com/en-US/p/sonia-tonge/560638), [Zumba with Sonia on Facebook](https://www.facebook.com/zumbawithsoniatonge/), [Sonia Tonge on X](https://x.com/soniatonge), [Get fit with Sonia on YouTube](https://www.youtube.com/channel/UCLh9ei0XRq57jIHkjemY0aQ), [Ruth Winston Centre article, Palmers Green Community](https://www.pgweb.uk/health/2920-zoom-in-on-fitness-french-and-art-with-ruth-winston), [Zumba with Sonia, N21 Online directory](http://n21online.com/business-directory/item/zumba-low-impact-class.html).
