@@ -29,7 +29,7 @@ wrangler.jsonc              assets-only Worker config
 package.json                wrangler devDependency + dev/deploy/check scripts
 ```
 
-The page needs no JavaScript to work. `site.js` only highlights today's classes, reveals the print button and lets `#zumba`-style links open a class tab.
+The page needs no JavaScript to work. `site.js` only highlights today's classes, reveals the print button, lets `#zumba`-style links open a class tab, and turns the photo links into a lightbox.
 
 The header and the contact-details footer stay pinned to the screen at every width. Below 900px the section links become a one-line strip that scrolls sideways.
 
@@ -48,7 +48,7 @@ Or, with nothing installed: `python3 -m http.server -d public 8000`.
 - **Prices** are in the facts strip, the prices cards (`id="prices"`), the timetable note and the JSON-LD block in the head.
 - **Contact details.** The email and phone number appear in the hero, facts strip, timetable note, contact section, the pinned footer, the JSON-LD block, and every page under `login/`, `register/`, `improvements/` and `404.html`. Search for `sonia.tonge@gmail.com` and `447957971473`.
 - **Social links.** Contact section and the JSON-LD `sameAs` list. Instagram is not linked: the handle is unconfirmed (see `work/brief.json`).
-- **Photos** live in `public/assets/img/`. The portrait has two sizes for `srcset`; gallery photos are the 400x284 originals from the old site.
+- **Photos** live in `public/assets/img/`. The portrait has two sizes for `srcset`; gallery photos are the 400x284 thumbnails the old site served (the full-size originals are listed in `work/brief.json` and should replace them once supplied). Any photo wrapped in `<a class="zoom" data-group="…" href="large-image">` opens large when clicked; links in the same group step through each other with the arrows, and without JavaScript the link simply opens the image.
 - **Improvements page.** A review page for Sonia. To retire it, delete `public/improvements/`, its screenshots under `assets/img/improvements/`, and the `nav__tab` link in the header of every page.
 - **Cache stamp.** `site.css`, `site.js` and `fonts.css` are cached for a year. When any of them changes, bump the `?v=` stamp on their links in every HTML file.
 - **Colours and type** are custom properties at the top of `site.css`. Lime is only ever used with dark text on it; the darker green carries text on light backgrounds.

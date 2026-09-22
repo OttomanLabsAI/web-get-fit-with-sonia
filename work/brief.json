@@ -3,35 +3,172 @@
   "captured": "2026-09-22",
   "note": "v1.0 was built from search-engine snippets because the live site is blocked from the build environment. For v1.1 the owner supplied saved copies of all seven pages of www.getfitwithsonia.co.uk (WordPress 6.2.12, Divi, 'The Designors' child theme) with their asset folders. Those copies are now the primary source: every 'site:' entry below was read from them, and they corrected several snippet-era errors (class names, the Tuesday 8:45 venue, the Friday time, and two sessions the snippets never showed).",
   "brand": {
-    "colors": { "value": { "lime": "#83ba28", "deep_green": "#284f15", "text_green": "#408400", "body_text": "#666666" }, "source": "site:css (logo-file.svg fills; Divi child-theme stylesheet; 31 inline background-color:#83ba28 rules)", "seen": "2026-09-22", "confidence": "confirmed" },
-    "logo": { "value": "assets/img/logo.svg (lime figure, dark-green swoosh, 'Get Fit with Sonia' wordmark) and assets/img/logo-white.png (white version for dark backgrounds)", "source": "site:header and site:footer", "seen": "2026-09-22", "confidence": "confirmed" },
-    "body_font": { "value": "Open Sans (self-hosted from @fontsource); the old site loaded it from Google Fonts", "source": "site:head", "seen": "2026-09-22", "confidence": "confirmed" },
-    "display_font": { "value": "Oswald (house default; the old site used Open Sans throughout, with Divi's default Poppins/Montserrat also requested)", "source": "house-style default", "seen": "2026-09-22", "confidence": "unconfirmed" },
-    "tone": { "value": "warm, plain, first-person, encouraging", "source": "site:/ (Sonia's welcome text)", "seen": "2026-09-22", "confidence": "confirmed" }
+    "colors": {
+      "value": {
+        "lime": "#83ba28",
+        "deep_green": "#284f15",
+        "text_green": "#408400",
+        "body_text": "#666666"
+      },
+      "source": "site:css (logo-file.svg fills; Divi child-theme stylesheet; 31 inline background-color:#83ba28 rules)",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "logo": {
+      "value": "assets/img/logo.svg (lime figure, dark-green swoosh, 'Get Fit with Sonia' wordmark) and assets/img/logo-white.png (white version for dark backgrounds)",
+      "source": "site:header and site:footer",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "body_font": {
+      "value": "Open Sans (self-hosted from @fontsource); the old site loaded it from Google Fonts",
+      "source": "site:head",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "display_font": {
+      "value": "Oswald (house default; the old site used Open Sans throughout, with Divi's default Poppins/Montserrat also requested)",
+      "source": "house-style default",
+      "seen": "2026-09-22",
+      "confidence": "unconfirmed"
+    },
+    "tone": {
+      "value": "warm, plain, first-person, encouraging",
+      "source": "site:/ (Sonia's welcome text)",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    }
   },
   "facts": {
-    "business_name": { "value": "Get fit with Sonia", "source": "site:<title> on every page", "seen": "2026-09-22", "confidence": "confirmed" },
-    "instructor": { "value": "Sonia Tonge, Fitness Instructor for almost 15 years", "source": "site:/ welcome text", "seen": "2026-09-22", "confidence": "confirmed" },
-    "welcome_text": { "value": "I'm Sonia Tonge and I've been a Fitness Instructor for almost 15 years now and I absolutely love teaching a variety of classes from Keep fit, Zumba, Legs bums and tums, Stretch, Hula hooping to Chair exercise. The reason is simple: I don't feel like it's a job as I feel so good after each class and even better still I love to see my participants getting the same enjoyment. I feel like I have a bigger family as some have become good friends and have been with me from the start. Spreading joy while exercising is the most amazing feeling. If you feel you have lost your sparkle and want it back, come join us in one of the class. The feel good vibe will rub off on you and you will come back for more. I look forward to seeing you in class.", "source": "site:/ (verbatim; the page quotes it with light punctuation fixes)", "seen": "2026-09-22", "confidence": "confirmed" },
-    "class_types_on_timetable": { "value": ["Zumba", "Hoop/Core Strength Class", "Chair Exercise", "Keep Fit", "Line Dancing", "Legs Bums and tums"], "source": "site:/classes-timetable/ blurb headings", "seen": "2026-09-22", "confidence": "confirmed" },
-    "prices": { "value": "All classes: one session £12; 10 session package £90. 'Please call 07957971473 or email sonia.tonge@gmail.com for bank transfer details or you can pay cash on the day.'", "source": "site:/book-now/", "seen": "2026-09-22", "confidence": "confirmed" },
-    "email": { "value": "sonia.tonge@gmail.com", "source": "site:header, site:/contact/, site:/book-now/", "seen": "2026-09-22", "confidence": "confirmed" },
-    "phone": { "value": "07957 971473", "source": "site:/contact/ (tel:07957971473, shown as '0795 797 1473') and site:/book-now/", "seen": "2026-09-22", "confidence": "confirmed" },
-    "first_visit_rule": { "value": "Please call or email before coming to class", "source": "site:/classes-timetable/ (under every session)", "seen": "2026-09-22", "confidence": "confirmed" },
+    "business_name": {
+      "value": "Get fit with Sonia",
+      "source": "site:<title> on every page",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "instructor": {
+      "value": "Sonia Tonge, Fitness Instructor for almost 15 years",
+      "source": "site:/ welcome text",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "welcome_text": {
+      "value": "I'm Sonia Tonge and I've been a Fitness Instructor for almost 15 years now and I absolutely love teaching a variety of classes from Keep fit, Zumba, Legs bums and tums, Stretch, Hula hooping to Chair exercise. The reason is simple: I don't feel like it's a job as I feel so good after each class and even better still I love to see my participants getting the same enjoyment. I feel like I have a bigger family as some have become good friends and have been with me from the start. Spreading joy while exercising is the most amazing feeling. If you feel you have lost your sparkle and want it back, come join us in one of the class. The feel good vibe will rub off on you and you will come back for more. I look forward to seeing you in class.",
+      "source": "site:/ (verbatim; the page quotes it with light punctuation fixes)",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "class_types_on_timetable": {
+      "value": [
+        "Zumba",
+        "Hoop/Core Strength Class",
+        "Chair Exercise",
+        "Keep Fit",
+        "Line Dancing",
+        "Legs Bums and tums"
+      ],
+      "source": "site:/classes-timetable/ blurb headings",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "prices": {
+      "value": "All classes: one session £12; 10 session package £90. 'Please call 07957971473 or email sonia.tonge@gmail.com for bank transfer details or you can pay cash on the day.'",
+      "source": "site:/book-now/",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "email": {
+      "value": "sonia.tonge@gmail.com",
+      "source": "site:header, site:/contact/, site:/book-now/",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "phone": {
+      "value": "07957 971473",
+      "source": "site:/contact/ (tel:07957971473, shown as '0795 797 1473') and site:/book-now/",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "first_visit_rule": {
+      "value": "Please call or email before coming to class",
+      "source": "site:/classes-timetable/ (under every session)",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
     "timetable": {
       "value": [
-        { "day": "Monday", "time": "9.30 am-10.15 am", "class": "Zumba", "venue": "Southgate Methodist Church (corner of The Bourne and Queen Elizabeth Drive) 45 The Bourne, Southgate, N14 6RS" },
-        { "day": "Monday", "time": "12:15pm-1:00pm", "class": "Chair Exercise", "venue": "Ruth Winston Centre, 190 Green Lanes N13 5UE" },
-        { "day": "Tuesday", "time": "8:45am – 9:45 am", "class": "Hoop/Core Strength Class", "venue": "Holy Trinity Church Hall- upstairs hall, Green Lanes, N21 3RS" },
-        { "day": "Tuesday", "time": "10:15am – 11:00 am", "class": "Zumba", "venue": "Holy Trinity Church Hall (upstairs hall), Green Lanes, N21 3RS" },
-        { "day": "Tuesday", "time": "2:30pm-3:10pm", "class": "Chair Exercise", "venue": "United Reformed Church, Armfield Road, EN2 0DH" },
-        { "day": "Wednesday", "time": "10:00am-11:00am", "class": "Keep Fit", "venue": "United Reformed Church, 77 Compton Road N21 3NU" },
-        { "day": "Wednesday", "time": "11:40am-12:40am (sic; shown as 12:40pm)", "class": "Line Dancing", "venue": "United Reformed Church, 77 Compton Road N21 3NU" },
-        { "day": "Thursday", "time": "9:20am-10:20am", "class": "Legs Bums and tums", "venue": "Holy Trinity Church Hall-Upstairs Hall, Green Lanes, N21 3RS" },
-        { "day": "Thursday", "time": "11:00am-11:40am", "class": "Chair Exercise", "venue": "Chipping Barnet library, 3 Stapylton Road, Barnet EN5 4QT" },
-        { "day": "Thursday", "time": "12:15pm-13:00pm", "class": "Zumba", "venue": "Manor Drive Methodist Church, Whetstone N20 0DZ" },
-        { "day": "Friday", "time": "09:30am-10:30am", "class": "Keep Fit", "venue": "Grange Park Methodist Church (Orchard Hall), Old Park Ridings N21 2EU" },
-        { "day": "Friday", "time": "12:30pm-1:15pm", "class": "Chair Exercise", "venue": "Bush Hill Methodist Church, 135 Wellington Road EN1 2RS" }
+        {
+          "day": "Monday",
+          "time": "9.30 am-10.15 am",
+          "class": "Zumba",
+          "venue": "Southgate Methodist Church (corner of The Bourne and Queen Elizabeth Drive) 45 The Bourne, Southgate, N14 6RS"
+        },
+        {
+          "day": "Monday",
+          "time": "12:15pm-1:00pm",
+          "class": "Chair Exercise",
+          "venue": "Ruth Winston Centre, 190 Green Lanes N13 5UE"
+        },
+        {
+          "day": "Tuesday",
+          "time": "8:45am – 9:45 am",
+          "class": "Hoop/Core Strength Class",
+          "venue": "Holy Trinity Church Hall- upstairs hall, Green Lanes, N21 3RS"
+        },
+        {
+          "day": "Tuesday",
+          "time": "10:15am – 11:00 am",
+          "class": "Zumba",
+          "venue": "Holy Trinity Church Hall (upstairs hall), Green Lanes, N21 3RS"
+        },
+        {
+          "day": "Tuesday",
+          "time": "2:30pm-3:10pm",
+          "class": "Chair Exercise",
+          "venue": "United Reformed Church, Armfield Road, EN2 0DH"
+        },
+        {
+          "day": "Wednesday",
+          "time": "10:00am-11:00am",
+          "class": "Keep Fit",
+          "venue": "United Reformed Church, 77 Compton Road N21 3NU"
+        },
+        {
+          "day": "Wednesday",
+          "time": "11:40am-12:40am (sic; shown as 12:40pm)",
+          "class": "Line Dancing",
+          "venue": "United Reformed Church, 77 Compton Road N21 3NU"
+        },
+        {
+          "day": "Thursday",
+          "time": "9:20am-10:20am",
+          "class": "Legs Bums and tums",
+          "venue": "Holy Trinity Church Hall-Upstairs Hall, Green Lanes, N21 3RS"
+        },
+        {
+          "day": "Thursday",
+          "time": "11:00am-11:40am",
+          "class": "Chair Exercise",
+          "venue": "Chipping Barnet library, 3 Stapylton Road, Barnet EN5 4QT"
+        },
+        {
+          "day": "Thursday",
+          "time": "12:15pm-13:00pm",
+          "class": "Zumba",
+          "venue": "Manor Drive Methodist Church, Whetstone N20 0DZ"
+        },
+        {
+          "day": "Friday",
+          "time": "09:30am-10:30am",
+          "class": "Keep Fit",
+          "venue": "Grange Park Methodist Church (Orchard Hall), Old Park Ridings N21 2EU"
+        },
+        {
+          "day": "Friday",
+          "time": "12:30pm-1:15pm",
+          "class": "Chair Exercise",
+          "venue": "Bush Hill Methodist Church, 135 Wellington Road EN1 2RS"
+        }
       ],
       "source": "site:/classes-timetable/ (saved copy; twelve Divi blurbs, quoted as written)",
       "seen": "2026-09-22",
@@ -39,28 +176,83 @@
     },
     "testimonials": {
       "value": [
-        { "name": "Teresa Cole", "text": "Love these classes. I've been attending for 4 months and am really seeing a difference in my fitness and energy levels. Positive coaching from Sonia ensures you get a great workout whichever class you choose" },
-        { "name": "Sonal Shah", "text": "Love your classes Sonia Tonge" },
-        { "name": "Susan Gale", "text": "Love these classes- great fun." }
+        {
+          "name": "Teresa Cole",
+          "text": "Love these classes. I've been attending for 4 months and am really seeing a difference in my fitness and energy levels. Positive coaching from Sonia ensures you get a great workout whichever class you choose"
+        },
+        {
+          "name": "Sonal Shah",
+          "text": "Love your classes Sonia Tonge"
+        },
+        {
+          "name": "Susan Gale",
+          "text": "Love these classes- great fun."
+        }
       ],
-      "source": "site:/testimonials/", "seen": "2026-09-22", "confidence": "confirmed"
+      "source": "site:/testimonials/",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
     },
-    "online_classes": { "value": "Page shows Monday and Friday 'no online classes', Tuesday/Wednesday/Thursday with Zumba posters from March 2020 and no times or platform", "source": "site:/online-classes/", "seen": "2026-09-22", "confidence": "confirmed (but stale)" },
-    "register_login": { "value": "Old header linked to /register/ and /login/ (WordPress pages); recreated as buttons with placeholder pages", "source": "site:header", "seen": "2026-09-22", "confidence": "confirmed" },
-    "qualifications": { "value": "Qualified gym instructor with a dance background; ZIN member since Aug 2012; licensed to teach Zumba, Zumba Gold, Zumba Kids & Kids Jr., Zumbini", "source": "pgweb.uk article snippet; zumba.com instructor profile snippet (not on the site itself)", "seen": "2026-09-22", "confidence": "unconfirmed" },
-    "lives_in": { "value": "Lives and works in Winchmore Hill", "source": "n21online business listing snippet", "seen": "2026-09-22", "confidence": "unconfirmed" },
+    "online_classes": {
+      "value": "Page shows Monday and Friday 'no online classes', Tuesday/Wednesday/Thursday with Zumba posters from March 2020 and no times or platform",
+      "source": "site:/online-classes/",
+      "seen": "2026-09-22",
+      "confidence": "confirmed (but stale)"
+    },
+    "register_login": {
+      "value": "Old header linked to /register/ and /login/ (WordPress pages); recreated as buttons with placeholder pages",
+      "source": "site:header",
+      "seen": "2026-09-22",
+      "confidence": "confirmed"
+    },
+    "qualifications": {
+      "value": "Qualified gym instructor with a dance background; ZIN member since Aug 2012; licensed to teach Zumba, Zumba Gold, Zumba Kids & Kids Jr., Zumbini",
+      "source": "pgweb.uk article snippet; zumba.com instructor profile snippet (not on the site itself)",
+      "seen": "2026-09-22",
+      "confidence": "unconfirmed"
+    },
+    "lives_in": {
+      "value": "Lives and works in Winchmore Hill",
+      "source": "n21online business listing snippet",
+      "seen": "2026-09-22",
+      "confidence": "unconfirmed"
+    },
     "socials": {
-      "value": { "facebook": "https://www.facebook.com/zumbawithsoniatonge/", "x": "https://x.com/soniatonge", "youtube": "https://www.youtube.com/channel/UCLh9ei0XRq57jIHkjemY0aQ", "instagram": null },
+      "value": {
+        "facebook": "https://www.facebook.com/zumbawithsoniatonge/",
+        "x": "https://x.com/soniatonge",
+        "youtube": "https://www.youtube.com/channel/UCLh9ei0XRq57jIHkjemY0aQ",
+        "instagram": null
+      },
       "source": "The old site's Facebook, X and Instagram icons all link to '#'. The three links used come from search results: the Facebook page carries the same phone number; X and YouTube match by name only",
-      "seen": "2026-09-22", "confidence": "unconfirmed"
+      "seen": "2026-09-22",
+      "confidence": "unconfirmed"
     }
   },
   "conflicts": [
-    { "field": "socials", "site": "icons link to '#'", "search": "facebook.com/zumbawithsoniatonge, x.com/soniatonge, YouTube 'Get fit with Sonia'", "on_page": "search links, flagged", "question": "Confirm the Facebook, X and YouTube links, and give the Instagram handle (the @getfitwithsonia account belongs to Sonia Jhas)." },
-    { "field": "Line Dancing end time", "site": "11:40am-12:40am", "on_page": "11:40am – 12:40pm", "question": "Confirm Line Dancing ends at 12:40pm." },
-    { "field": "online classes", "site": "Tuesday to Thursday posters from 2020, no times", "on_page": "omitted", "question": "Do online classes still run? If so, days, times, platform and price." }
+    {
+      "field": "socials",
+      "site": "icons link to '#'",
+      "search": "facebook.com/zumbawithsoniatonge, x.com/soniatonge, YouTube 'Get fit with Sonia'",
+      "on_page": "search links, flagged",
+      "question": "Confirm the Facebook, X and YouTube links, and give the Instagram handle (the @getfitwithsonia account belongs to Sonia Jhas)."
+    },
+    {
+      "field": "Line Dancing end time",
+      "site": "11:40am-12:40am",
+      "on_page": "11:40am – 12:40pm",
+      "question": "Confirm Line Dancing ends at 12:40pm."
+    },
+    {
+      "field": "online classes",
+      "site": "Tuesday to Thursday posters from 2020, no times",
+      "on_page": "omitted",
+      "question": "Do online classes still run? If so, days, times, platform and price."
+    }
   ],
   "gaps": [
+    "Full-size gallery originals: the saved page only held 400x284 crops, so three photos have heads cut off. The old page links the originals at wp-content/uploads/2020/03/IMG_4007.jpg, Sonia-zumba-pic.jpg, IMG_4146.jpg, Zumba-Gold-3.jpeg, 20190427_105530_resized_20200329_030729538-scaled.jpg and 2022/03/20170919_164736-1-1.jpg.",
+    "The portrait selfie (Sonia-Fitness-1-scaled.jpg) is cut at the crown in the original file; the page shows the whole file, so there is nothing above the head to reveal. A different photo, or an agreed retouch, is the fix.",
     "Instagram handle.",
     "Whether each Zumba session is Zumba or Zumba Gold.",
     "Stretch and hula hooping are named in the welcome text but only 'Hoop/Core Strength' has a timetable slot.",
@@ -68,6 +260,7 @@
     "Three gallery images left out: 'Fitness' and 'Zumba-Basic-pic' look like Zumba marketing photos rather than Sonia's own, and 'reasons-to-zumba' is an infographic."
   ],
   "questions": [
+    "Please send the full-size gallery originals (or download them from the old site's gallery lightbox links), and a portrait with the whole head in frame if you have one.",
     "Confirm the Facebook, X and YouTube links, and give your Instagram handle.",
     "Is each Zumba session Zumba or Zumba Gold?",
     "Does Line Dancing end at 12:40pm?",
@@ -76,14 +269,59 @@
     "Is anything on the timetable out of date?"
   ],
   "photos": [
-    { "file": "assets/img/sonia-portrait-720.jpg, -1200.jpg", "source": "site:/ (Sonia-Fitness-1-scaled.jpg, 1920x2560)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-zumba-gold.jpg", "source": "site:/gallery/ (Zumba-Gold-3-400x284.jpeg)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-class-hall.jpg", "source": "site:/gallery/ (IMG_4146-400x284.jpg)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-green-team.jpg", "source": "site:/gallery/ (20190427_105530_resized_20200329_030729538-400x284.jpg)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-sonia-zumba.jpg", "source": "site:/gallery/ (Sonia-zumba-pic-400x284.jpg)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-stage.jpg", "source": "site:/gallery/ (IMG_4007-400x284.jpg)", "theirs": true, "cleared": true },
-    { "file": "assets/img/gallery-sonia-selfie.jpg", "source": "site:/gallery/ (20170919_164736-1-1-400x284.jpg)", "theirs": true, "cleared": true },
-    { "file": "(not used) Fitness-400x284.jpg, Zumba-Basic-pic-400x284.jpg", "source": "site:/gallery/", "theirs": false, "cleared": false },
-    { "file": "assets/img/logo.svg, logo-white.png", "source": "site:header, site:footer", "theirs": true, "cleared": true }
+    {
+      "file": "assets/img/sonia-portrait-720.jpg, -1200.jpg",
+      "source": "site:/ (Sonia-Fitness-1-scaled.jpg, 1920x2560)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-zumba-gold.jpg",
+      "source": "site:/gallery/ (Zumba-Gold-3-400x284.jpeg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-class-hall.jpg",
+      "source": "site:/gallery/ (IMG_4146-400x284.jpg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-green-team.jpg",
+      "source": "site:/gallery/ (20190427_105530_resized_20200329_030729538-400x284.jpg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-sonia-zumba.jpg",
+      "source": "site:/gallery/ (Sonia-zumba-pic-400x284.jpg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-stage.jpg",
+      "source": "site:/gallery/ (IMG_4007-400x284.jpg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "assets/img/gallery-sonia-selfie.jpg",
+      "source": "site:/gallery/ (20170919_164736-1-1-400x284.jpg)",
+      "theirs": true,
+      "cleared": true
+    },
+    {
+      "file": "(not used) Fitness-400x284.jpg, Zumba-Basic-pic-400x284.jpg",
+      "source": "site:/gallery/",
+      "theirs": false,
+      "cleared": false
+    },
+    {
+      "file": "assets/img/logo.svg, logo-white.png",
+      "source": "site:header, site:footer",
+      "theirs": true,
+      "cleared": true
+    }
   ]
 }
