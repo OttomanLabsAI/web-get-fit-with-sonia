@@ -70,12 +70,29 @@
     var link = group[index];
     var thumb = link.querySelector('img');
     var figure = link.parentNode && link.parentNode.querySelector ? link.parentNode.querySelector('figcaption') : null;
+    img.style.width = ''; img.style.height = '';
+    img.onload = fit;
     img.src = link.getAttribute('href');
     img.alt = thumb ? thumb.alt : '';
     cap.textContent = figure ? figure.textContent : (thumb ? thumb.alt : '');
     prev.hidden = next.hidden = group.length < 2;
     if (!dlg.open) dlg.showModal();
   }
+
+  // Draw the image at its own proportions: as large as the screen allows, and at
+  // least 1.5x a small thumbnail, but never wider or taller than fits.
+  function fit() {
+    var nw = img.naturalWidth, nh = img.naturalHeight;
+    if (!nw || !nh) return;
+    var maxW = Math.min(window.innerWidth * (window.innerWidth < 600 ? 0.96 : 0.92), 820);
+    var maxH = window.innerHeight * (window.innerWidth < 600 ? 0.70 : 0.78);
+    var w = nw < 600 ? Math.min(nw * 1.5, maxW) : Math.min(nw, maxW);
+    var h = w * nh / nw;
+    if (h > maxH) { h = maxH; w = h * nw / nh; }
+    img.style.width = Math.round(w) + 'px';
+    img.style.height = Math.round(h) + 'px';
+  }
+  window.addEventListener('resize', function () { if (dlg.open) fit(); });
 
   links.forEach(function (link) {
     link.addEventListener('click', function (e) {

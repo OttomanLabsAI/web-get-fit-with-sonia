@@ -1,0 +1,13 @@
+v1.4 is released. The one place a photo was shown in the wrong shape is fixed: the enlarged view. On desktop the lightbox forced a minimum width, so a portrait photo sat in a box wider than itself with black bars either side. Every enlarged photo is now drawn at exactly its own proportions, measured at 3 by 4 for the portrait and 400 by 284 for the gallery pictures on desktop and phone. Nowhere else on the page crops, stretches or forces a shape: the About portrait, the gallery tiles and the before-and-after shots all keep the ratio of their file.
+
+What I cannot change from here is the shape of the files themselves. The three gallery pictures with heads missing are 400 by 284 crops made by the old WordPress site, and those crops are the only copies I have. The originals are portrait and sit on the old site, which this environment cannot reach, so I cannot fetch them. Attach them here the same way you attached the saved pages, or save them from these addresses and attach the files:
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2020/03/IMG_4007.jpg
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2020/03/Sonia-zumba-pic.jpg
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2022/03/20170919_164736-1-1.jpg
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2020/03/IMG_4146.jpg
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2020/03/Zumba-Gold-3.jpeg
+- https://www.getfitwithsonia.co.uk/wp-content/uploads/2020/03/20190427_105530_resized_20200329_030729538-scaled.jpg
+
+As soon as they arrive they go in whole, portrait ones tall, and the gallery and lightbox are already built to take them without further changes.
+
+**Verified.** The enlarged portrait and a gallery photo measured at their natural ratios on desktop and phone, the lightbox behaviour script passing with no console errors, valid HTML, the layout sweep clean at thirteen widths, zero axe violations, and the wrangler dry run passing.

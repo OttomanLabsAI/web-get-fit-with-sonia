@@ -415,6 +415,7 @@ a.zoom:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: -3
   border: 0; padding: 0; margin: 0; background: transparent;
   width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh;
 }
+.lightbox { --lb-max-w: min(92vw, 820px); --lb-max-h: 78vh; }
 .lightbox::backdrop { background: rgba(23, 26, 20, 0.92); }
 .lightbox figure {
   position: absolute; inset: 0; margin: 0; padding: 4rem 1rem 1.5rem;
@@ -422,7 +423,7 @@ a.zoom:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: -3
   pointer-events: none;
 }
 .lightbox img {
-  min-width: min(92vw, 620px); max-width: min(92vw, 820px); max-height: 78vh; width: auto; height: auto; object-fit: contain;
+  max-width: 92vw; max-height: 78vh; width: auto; height: auto;
   border: 2px solid var(--dark-ink); border-radius: var(--radius); background: #000; pointer-events: auto;
 }
 .lightbox figcaption { color: var(--dark-ink); font-size: 0.95rem; text-align: center; max-width: 60ch; }
@@ -439,6 +440,7 @@ a.zoom:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: -3
 @media (max-width: 599px) {
   .lightbox figure { padding: 3.5rem 0.75rem 4.5rem; }
   .lightbox img { max-width: 96vw; max-height: 70vh; }
+  .lightbox { --lb-max-w: 96vw; --lb-max-h: 70vh; }
   .lightbox__prev, .lightbox__next { top: auto; bottom: 1rem; transform: none; }
 }
 
