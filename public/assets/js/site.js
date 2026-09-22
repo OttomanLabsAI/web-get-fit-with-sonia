@@ -19,7 +19,7 @@
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Deep links to a class tab: #keep-fit, #zumba, #legs-bums-tums, #stretch, #hula-hooping, #chair-exercise.
+  // Deep links to a class tab: #zumba, #keep-fit, #chair-exercise, #legs-bums-tums, #hoop-core, #line-dancing.
   function openTab() {
     var id = window.location.hash.replace('#', '');
     if (!id) return;

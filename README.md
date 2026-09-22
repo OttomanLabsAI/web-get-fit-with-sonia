@@ -1,6 +1,6 @@
 # Get fit with Sonia — website
 
-The website for **Get fit with Sonia**: Sonia Tonge's keep fit, Zumba, legs bums and tums, stretch, hula hooping and chair exercise classes across Winchmore Hill, Southgate, Palmers Green, Enfield and Barnet.
+The website for **Get fit with Sonia**: Sonia Tonge's Zumba, keep fit, chair exercise, legs bums and tums, hoop and core, and line dancing classes across Southgate, Winchmore Hill, Palmers Green, Enfield, Whetstone and Barnet.
 
 One fast page, served as static files by Cloudflare Workers. No framework and no build step: the files in `public/` are the site.
 
@@ -8,24 +8,30 @@ One fast page, served as static files by Cloudflare Workers. No framework and no
 
 ```
 public/
-  index.html            the whole site: hero, facts, classes, timetable, about, venues, contact
-  404.html              themed not-found page
-  favicon.svg
-  robots.txt            allows indexing; points at the sitemap
-  sitemap.xml
-  _headers              security headers, content-security policy, caching
+  index.html                the whole site: hero, facts, prices, classes, timetable, about, gallery, reviews, venues, contact
+  404.html                  themed not-found page
+  login/index.html          placeholder for a future members' area (noindex)
+  register/index.html       placeholder for a future members' area (noindex)
+  improvements/index.html   the old site and the new one side by side, for Sonia's review (noindex)
+  favicon.svg               the logo mark on a lime square
+  robots.txt, sitemap.xml
+  _headers                  security headers, content-security policy, caching
+  _redirects                the old WordPress page addresses, sent to the matching part of the page
   assets/
-    css/site.css        all styling (tokens at the top)
-    js/site.js          small enhancements: today's classes, print button, tab deep links
-    img/og.png          social sharing image (1200 x 630)
-  fonts/                self-hosted Oswald and Inter (from @fontsource, OFL) + fonts.css
+    css/site.css            all styling (Sonia's green brand tokens at the top)
+    js/site.js              small enhancements: today's classes, print button, tab deep links
+    img/                    logo, Sonia's portrait, gallery photos, sharing image, before/after screenshots
+  fonts/                    self-hosted Oswald and Open Sans (from @fontsource, OFL) + fonts.css
 work/
-  brief.json            every fact on the page, where it came from, and what is unconfirmed
-wrangler.jsonc          assets-only Worker config
-package.json            wrangler devDependency + dev/deploy/check scripts
+  brief.json                every fact on the page, where it came from, and what is unconfirmed
+prompt text/                the owner's prompt, reply and supplied files for the version in service
+wrangler.jsonc              assets-only Worker config
+package.json                wrangler devDependency + dev/deploy/check scripts
 ```
 
-The page needs no JavaScript to work. `site.js` only highlights today's classes, reveals the print button and lets `#keep-fit`-style links open a class tab.
+The page needs no JavaScript to work. `site.js` only highlights today's classes, reveals the print button and lets `#zumba`-style links open a class tab.
+
+The header and the contact-details footer stay pinned to the screen at every width. Below 900px the section links become a one-line strip that scrolls sideways.
 
 ## Local development
 
@@ -38,11 +44,14 @@ Or, with nothing installed: `python3 -m http.server -d public 8000`.
 
 ## Editing the site
 
-- **Timetable.** The sessions appear three times in `public/index.html`: the hero card ("This week's classes"), the full timetable (`id="timetable"`) and the venue cards (`id="venues"`). Change all three. A session whose class name is not yet known is labelled "Fitness class"; give it a name and add the matching colour class (`c-keep`, `c-zumba`, `c-lbt`, `c-stretch`, `c-hoop`, `c-chair`) to the `slot__class` span.
-- **Contact details.** The email and phone number appear in the hero, facts strip, timetable note, contact section, footer, the JSON-LD block in the head, and `404.html`. Search for `sonia.tonge@gmail.com` and `447957971473`.
-- **Social links.** Contact section, footer and the JSON-LD `sameAs` list. Instagram is not linked yet: the handle is unconfirmed (see `work/brief.json`).
-- **Cache stamp.** `site.css` and `site.js` are cached for a year. When either changes, bump the `?v=` stamp on their links in `index.html` and `404.html`.
-- **Colours and type** are custom properties at the top of `site.css`.
+- **Timetable.** The twelve sessions appear three times in `public/index.html`: the hero card ("This week's classes"), the full timetable (`id="timetable"`) and the venue cards (`id="venues"`). Change all three. Each session carries a colour class (`c-zumba`, `c-keep`, `c-chair`, `c-lbt`, `c-hoop`, `c-line`) on its `slot__class` span, and the class panels under `id="classes"` repeat the "when and where" in words.
+- **Prices** are in the facts strip, the prices cards (`id="prices"`), the timetable note and the JSON-LD block in the head.
+- **Contact details.** The email and phone number appear in the hero, facts strip, timetable note, contact section, the pinned footer, the JSON-LD block, and every page under `login/`, `register/`, `improvements/` and `404.html`. Search for `sonia.tonge@gmail.com` and `447957971473`.
+- **Social links.** Contact section and the JSON-LD `sameAs` list. Instagram is not linked: the handle is unconfirmed (see `work/brief.json`).
+- **Photos** live in `public/assets/img/`. The portrait has two sizes for `srcset`; gallery photos are the 400x284 originals from the old site.
+- **Improvements page.** A review page for Sonia. To retire it, delete `public/improvements/`, its screenshots under `assets/img/improvements/`, and the `nav__tab` link in the header of every page.
+- **Cache stamp.** `site.css`, `site.js` and `fonts.css` are cached for a year. When any of them changes, bump the `?v=` stamp on their links in every HTML file.
+- **Colours and type** are custom properties at the top of `site.css`. Lime is only ever used with dark text on it; the darker green carries text on light backgrounds.
 
 ## Verification before a release
 
@@ -52,15 +61,15 @@ Run both before every push to `main`; a push to `main` is a production deploy.
 npx wrangler deploy --dry-run
 ```
 
-Then serve `public/`, render it with headless Chromium at desktop and phone widths, and look at the screenshots: fonts loaded, layout intact, nothing overflowing at 320px. The `cloudflare-static-site` skill's `render_check.py` and the `site-pitch` skill's `verify-layout.js` do this (the verifier needs `playwright-core` and a system Chromium).
+Then serve `public/`, render every page with headless Chromium at desktop and phone widths, and look at the screenshots: fonts loaded, layout intact, nothing overflowing at 320px. The `cloudflare-static-site` skill's `render_check.py` and the `site-pitch` skill's `verify-layout.js` do this (routes `/`, `/404.html`, `/login/`, `/register/`, `/improvements/`; the verifier needs `playwright-core` and a system Chromium).
 
 ## Deployment
 
-The repository connects to Cloudflare Workers Builds, so every push to `main` deploys to production. Connect it once in the Cloudflare dashboard (Workers & Pages → Create → Import a repository), then add `www.getfitwithsonia.co.uk` as a custom domain on the Worker and point the DNS at it.
+The repository connects to Cloudflare Workers Builds, so every push to `main` deploys to production. Add `www.getfitwithsonia.co.uk` as a custom domain on the Worker and point the DNS at it once Sonia has confirmed the open questions in `work/brief.json`.
 
 ## Facts and sources
 
-`work/brief.json` records where every fact on the page came from and which ones are still unconfirmed, plus the questions to put to Sonia before the site goes live (class names for seven sessions, the phone number, Instagram handle, prices, photos and testimonials).
+`work/brief.json` records where every fact on the page came from. Since v1.1 the source is the site's own pages, supplied by the owner as saved copies (kept under `prompt text/`). The questions still open for Sonia are listed there and on the Improvements page.
 
 ## External resources
 

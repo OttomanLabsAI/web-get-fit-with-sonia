@@ -9,12 +9,14 @@ The website for Get fit with Sonia (Sonia Tonge, fitness instructor, North Londo
 ```
 public/            everything served
   index.html       the whole site on one page
-  404.html
+  404.html, login/, register/, improvements/   themed side pages (the last three are noindex)
   assets/css|js|img
-  fonts/           self-hosted Oswald and Inter
+  fonts/           self-hosted Oswald and Open Sans
   _headers         security + caching headers
+  _redirects       old WordPress page addresses -> parts of the page
   robots.txt, sitemap.xml
 work/brief.json    every fact on the page and its source
+prompt text/       the owner's prompt, reply and supplied files for the version in service
 wrangler.jsonc     assets-only config, no Worker script
 package.json       wrangler devDependency + dev/deploy/check scripts
 ```
@@ -75,15 +77,19 @@ owner-supplied records: never edit, reformat, trim or regenerate them.
 
 ## The page itself
 
-The content is Sonia's and every fact on it traces to `work/brief.json`. Do not
-add a price, a session, a claim or a link that the brief cannot source; put the
-gap in the brief's `questions` instead. Facts the brief marks unconfirmed
-(phone number, social handles, class names shown as "Fitness class") are to be
-checked with Sonia before the domain moves to this site. When `site.css` or
-`site.js` change, bump their `?v=` stamps in `index.html` and `404.html`.
+The content is Sonia's and every fact on it traces to `work/brief.json`, whose
+source since v1.1 is the saved copies of her own pages under `prompt text/`. Do
+not add a price, a session, a claim or a link that the brief cannot source; put
+the gap in the brief's `questions` instead. The social links are still
+unconfirmed. The header and the contact footer stay pinned at every width. The
+Improvements page is a review page for Sonia and can be retired once she has
+signed off (delete `public/improvements/`, its screenshots and the `nav__tab`
+link on every page). When `site.css`, `site.js` or `fonts.css` change, bump
+their `?v=` stamps in every HTML file.
 
 ## Release ledger
 
 | Version | Title | Description |
 | --- | --- | --- |
 | v1.0 | A new home for Sonia's classes | Everything a new face needs is now on one quick page: the week's classes with venues, postcodes and map links, what each kind of class is like, who Sonia is, and how to get in touch before a first session. It loads fast on a phone, reads clearly, and prints as a one-sheet timetable. |
+| v1.1 | Sonia's own photos, prices and full timetable | The page now wears Sonia's green logo and colours, shows her photo and pictures from her classes, and carries every one of her twelve sessions by name, with prices and three reviews from regulars. Her number and email stay pinned to the bottom of the screen, the header stays in view, Log in and Register buttons are ready for a members' area, and an Improvements tab shows the old site and the new one side by side. |

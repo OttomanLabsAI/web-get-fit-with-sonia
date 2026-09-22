@@ -1,0 +1,15 @@
+# The old WordPress site had separate pages; everything now lives on one page.
+/classes-timetable/  /#timetable  301
+/classes-timetable   /#timetable  301
+/online-classes/     /#classes    301
+/online-classes      /#classes    301
+/gallery/            /#gallery    301
+/gallery             /#gallery    301
+/testimonials/       /#testimonials  301
+/testimonials        /#testimonials  301
+/contact/            /#contact    301
+/contact             /#contact    301
+/book-now/           /#prices     301
+/book-now            /#prices     301
+/book-online/        /#contact    301
+/book-online         /#contact    301
