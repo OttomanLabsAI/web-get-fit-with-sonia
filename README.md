@@ -34,6 +34,8 @@ The page needs no JavaScript to work. `site.js` only highlights today's classes,
 
 The header and the contact-details footer stay pinned to the screen at every width. Below 900px the section links become a one-line strip that scrolls sideways.
 
+On phones the page is laid out to keep scrolling short. The class tabs stay tabs, two buttons to a row, so only the chosen class is on screen. Each timetable session takes two lines: time, class and map link, then the venue. The prices sit side by side, the portrait sits beside the welcome text, gallery photos go two to a row, and the venue cards become a row that swipes sideways. At 390px wide the home page is about nine screens tall.
+
 ## Demo chrome
 
 While Sonia reviews the site, every page carries the `site-pitch` demo bar at the top with three tabs: **New site** (`/`), **Current site**, which opens her live WordPress site at www.getfitwithsonia.co.uk in a new tab so the new site stays open beside it, and **Improvements** (`/improvements/`), whose first section has a button that opens the live site in a new tab too. The review page is `noindex` and disallowed in `robots.txt`. Up to v1.5 the Current site tab showed a working copy of the old site at `/original/`; that copy was removed in v1.6, and `_redirects` sends any old link to it on to the live site with a temporary (302) redirect.
@@ -55,10 +57,10 @@ Or, with nothing installed: `python3 -m http.server -d public 8000`.
 - **Prices** are in the facts strip, the prices cards (`id="prices"`), the timetable note and the JSON-LD block in the head.
 - **Contact details.** The email and phone number appear in the hero, facts strip, timetable note, contact section, the pinned footer, the JSON-LD block, and every page under `login/`, `register/`, `improvements/` and `404.html`. Search for `sonia.tonge@gmail.com` and `447957971473`.
 - **Social links.** Contact section and the JSON-LD `sameAs` list. Instagram is not linked: the handle is unconfirmed (see `work/brief.json`).
-- **Gallery layout.** Every photo is shown at its own natural size and proportions, nothing enlarged, shrunk or cropped, in a centred flow whose rows fall where they fall. On phones a photo scales down to the screen width at its own ratio. Portrait originals will sit tall beside landscape ones.
+- **Gallery layout.** Every photo is shown at its own natural size and proportions, nothing enlarged, shrunk or cropped, in a centred flow whose rows fall where they fall. Below 720px the photos sit two to a row, each scaled down at its own ratio. Portrait originals will sit tall beside landscape ones.
 - **Photos** live in `public/assets/img/`. The portrait has two sizes for `srcset`; gallery photos are the 400x284 thumbnails the old site served (the full-size originals are listed in `work/brief.json` and should replace them once supplied). Any photo wrapped in `<a class="zoom" data-group="…" href="large-image">` opens large when clicked; links in the same group step through each other with the arrows, and without JavaScript the link simply opens the image.
-- **Improvements page.** A review page for Sonia. To retire it, delete `public/improvements/`, its screenshots under `assets/img/improvements/`, and the `nav__tab` link in the header of every page.
-- **Cache stamp.** `site.css`, `site.js` and `fonts.css` are cached for a year. When any of them changes, bump the `?v=` stamp on their links in every HTML file.
+- **Improvements page.** A review page for Sonia; Demo chrome above says how to retire it. The two "New" phone screenshots show the site as a visitor sees it, without the demo bar. Retake them at 390 by 844 when the phone layout changes, and bump the `?v=` stamp on their links.
+- **Cache stamp.** Everything under `assets/` and `fonts/` is cached for a year. When `site.css`, `demo-bar.css`, `site.js` or `fonts.css` changes, bump the `?v=` stamp on its links in every HTML file; a replaced image needs a stamp too.
 - **Colours and type** are custom properties at the top of `site.css`. Lime is only ever used with dark text on it; the darker green carries text on light backgrounds.
 
 ## Verification before a release

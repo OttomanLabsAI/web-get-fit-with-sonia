@@ -1,5 +1,0 @@
-v1.6 is released. The copied old site is gone, and any old link to it now goes to the real site. On every page, Current site in the bar at the top opens Sonia's real website in a new tab, marked with a small arrow, so the new site stays open to come back to. The Improvements page also has an "Open your current site" button at the very top that does the same. I took "the pitch page at the top" to mean both places; say if you want just one.
-
-While checking the bar I found that on the smallest phones, 320px wide, the Improvements tab was cut off at the edge. All three tabs now fit.
-
-**Verified.** I clicked each of the six links. Every one opens the real site in a new tab and leaves the page where it was, and screen readers hear that it opens a new tab. Old copy addresses redirect to the real site under wrangler dev. The bar fits at every width from 320px up. The layout sweep is clean on all five pages at thirteen widths from 320px to 1920px, the HTML is valid, axe finds zero violations, the timetable still prints on one sheet, and the wrangler dry run passes.

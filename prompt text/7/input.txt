@@ -1,1 +1,0 @@
-remove the current site page and add a link to it that opens in a new tab on the pitch page at the top
