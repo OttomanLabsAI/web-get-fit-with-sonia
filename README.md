@@ -13,11 +13,10 @@ public/
   login/index.html          placeholder for a future members' area (noindex)
   register/index.html       placeholder for a future members' area (noindex)
   improvements/index.html   the old site and the new one side by side, for Sonia's review (noindex)
-  original/                 a working copy of the old WordPress site, made from saved pages (noindex; see Demo chrome)
   favicon.svg               the logo mark on a lime square
   robots.txt, sitemap.xml
   _headers                  security headers, content-security policy, caching
-  _redirects                the old WordPress page addresses, sent to the matching part of the page
+  _redirects                the old WordPress page addresses, sent to the matching part of the page; old /original/ links, sent to the live site
   assets/
     css/site.css            all styling (Sonia's green brand tokens at the top)
     css/demo-bar.css        the site-pitch demo bar shown on every page while the site is under review
@@ -37,9 +36,9 @@ The header and the contact-details footer stay pinned to the screen at every wid
 
 ## Demo chrome
 
-While Sonia reviews the site, every page carries the `site-pitch` demo bar at the top with three tabs: **New site** (`/`), **Current site** (`/original/`, a working copy of the old WordPress site made from pages saved on 22 September 2026, with scripts, trackers, search hints and every reference back to the live host stripped, forms unable to submit, and a dated snapshot strip) and **Improvements** (`/improvements/`). The copy and the review page are `noindex` and disallowed in `robots.txt`, and `_headers` gives `/original/*` its own content-security policy so the copied theme's inline styles work while scripts stay off.
+While Sonia reviews the site, every page carries the `site-pitch` demo bar at the top with three tabs: **New site** (`/`), **Current site**, which opens her live WordPress site at www.getfitwithsonia.co.uk in a new tab so the new site stays open beside it, and **Improvements** (`/improvements/`), whose first section has a button that opens the live site in a new tab too. The review page is `noindex` and disallowed in `robots.txt`. Up to v1.5 the Current site tab showed a working copy of the old site at `/original/`; that copy was removed in v1.6, and `_redirects` sends any old link to it on to the live site with a temporary (302) redirect.
 
-To retire the demo chrome when the site goes live: remove the `demo-bar.css` link and the `#pitch-bar` nav from every page, delete `public/original/` and `public/improvements/` (and the screenshots under `assets/img/improvements/`), drop the `/original/*` block from `_headers` and the disallow lines from `robots.txt`, and set the header back to `top: 0` and the anchor offsets back down by 48px in `site.css`.
+To retire the demo chrome when the site goes live: remove the `demo-bar.css` link and the `#pitch-bar` nav from every page, delete `public/improvements/` (and the screenshots under `assets/img/improvements/`), drop the two `/original` lines from `_redirects` and the `/improvements/` disallow line from `robots.txt`, and in `site.css` remove the `.ext` rule (only the Improvements button uses it) and set the header back to `top: 0` and the anchor offsets back down by 48px.
 
 ## Local development
 

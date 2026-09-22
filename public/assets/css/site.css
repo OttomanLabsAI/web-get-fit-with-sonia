@@ -152,6 +152,7 @@ strong { font-weight: 600; }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--ghost:hover, .btn--ghost:focus-visible { background: var(--ink); color: var(--dark-ink); border-color: var(--ink); }
 .btn--small { padding: 0.45rem 0.8rem; font-size: 0.9rem; }
+.ext { flex: none; width: 0.85em; height: 0.85em; }
 .link {
   font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent);
   text-decoration-thickness: 2px; text-underline-offset: 0.2em;

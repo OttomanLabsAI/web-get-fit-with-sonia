@@ -15,13 +15,23 @@
 #pitch-bar a:hover{color:#fff}
 #pitch-bar a[aria-current="page"]{color:#fff;
   border-bottom-color:var(--pitch-accent,#e8b33a)}
+/* Current site is the live site, opened in a new tab: a small arrow shows it,
+   and screen readers hear "(opens in a new tab)". */
+#pitch-bar .pitch-ext{display:inline-block;width:10px;height:10px;margin-left:5px;vertical-align:0}
+#pitch-bar .pitch-vh{position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 body{padding-top:48px !important}
 #pitch-bar{overflow-x:auto;scrollbar-width:none}
 #pitch-bar::-webkit-scrollbar{display:none}
-@media (max-width:359px){#pitch-bar a{font-size:11px;padding:16px 5px 14px}}
 @media (max-width:479px){
   #pitch-bar{padding:0 6px;gap:2px}
   #pitch-bar a{padding:16px 7px 14px;font-size:12px}
   #pitch-bar .pitch-chip{margin-right:2px}
+}
+/* After the 479px block so it wins: all three tabs fit on a 320px screen. */
+@media (max-width:359px){
+  #pitch-bar{padding:0 4px}
+  #pitch-bar a{font-size:11px;padding:16px 4px 14px}
+  #pitch-bar .pitch-ext{margin-left:4px}
 }
 @media print{#pitch-bar{display:none}body{padding-top:0 !important}}

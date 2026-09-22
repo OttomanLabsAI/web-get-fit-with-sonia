@@ -13,3 +13,7 @@
 /book-now            /#prices     301
 /book-online/        /#contact    301
 /book-online         /#contact    301
+
+# The demo's copy of the old site is gone; any link to it opens the live site instead.
+/original    https://www.getfitwithsonia.co.uk/  302
+/original/*  https://www.getfitwithsonia.co.uk/:splat  302

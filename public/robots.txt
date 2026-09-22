@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /original/
 Disallow: /improvements/
 Disallow: /login/
 Disallow: /register/

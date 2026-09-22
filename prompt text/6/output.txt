@@ -1,5 +1,0 @@
-v1.5 is released. Every gallery photo now sits at its own original size and shape: none enlarged, none shrunk, none cropped, all six at 400 by 284 pixels, measured on the page at 1200px and 1440px. They flow centrally, three to a row on wide screens and two on narrower ones, and on a phone each scales to the screen width at the same ratio.
-
-The three with heads missing are still the cropped files the old site served. I cannot fetch the originals from here, so attach them when you can and they go in as they were taken.
-
-**Verified.** Displayed size equals file size for every gallery photo at desktop widths, valid HTML, the layout sweep clean at thirteen widths from 320px to 1920px, zero axe violations, and the wrangler dry run passing.

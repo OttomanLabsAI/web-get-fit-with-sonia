@@ -10,7 +10,6 @@ The website for Get fit with Sonia (Sonia Tonge, fitness instructor, North Londo
 public/            everything served
   index.html       the whole site on one page
   404.html, login/, register/, improvements/   themed side pages (the last three are noindex)
-  original/        working copy of the old site for the demo bar's Current site tab (noindex)
   assets/css|js|img
   fonts/           self-hosted Oswald and Open Sans
   _headers         security + caching headers
@@ -84,10 +83,12 @@ not add a price, a session, a claim or a link that the brief cannot source; put
 the gap in the brief's `questions` instead. The social links are still
 unconfirmed. The header and the contact footer stay pinned at every width. Every
 page carries the site-pitch demo bar (New site, Current site, Improvements)
-while Sonia reviews; the README's "Demo chrome" section says exactly what to
-remove when the site goes live, including `public/original/`,
-`public/improvements/`, the `/original/*` headers block and the robots lines. When `site.css`, `site.js` or `fonts.css` change, bump
-their `?v=` stamps in every HTML file.
+while Sonia reviews; Current site opens her live site in a new tab, as does the
+button at the top of the Improvements page. The README's "Demo chrome" section
+says exactly what to remove when the site goes live, including
+`public/improvements/`, the `/original` redirects and the robots line. When
+`site.css`, `demo-bar.css`, `site.js` or `fonts.css` change, bump their `?v=`
+stamps in every HTML file.
 
 ## Release ledger
 
@@ -99,3 +100,4 @@ their `?v=` stamps in every HTML file.
 | v1.3 | A demo bar to flick between old and new | Every page now has a bar at the very top with three tabs, the new site, a working copy of the current one, and the Improvements page, so Sonia can flick between them on her phone. The gallery is a centred composition where each photo keeps its own shape, the two group shots run larger, and the testimonial cards say so. |
 | v1.4 | Enlarged photos keep their true shape | Tapping a photo now shows it at exactly its own proportions on every screen, with no black bars around portrait pictures on desktop. |
 | v1.5 | Gallery photos at their true size | Every gallery photo now sits at exactly its original size and shape, none bigger or smaller than another, arranged centrally with the sides left free. |
+| v1.6 | The real current site opens in a new tab | The copied old site has gone from the demo. Current site in the top bar, and a new button at the top of the Improvements page, now open Sonia's real website in a new tab, so the new site stays open to compare against, and all three tabs in the bar now fit on the smallest phones. |

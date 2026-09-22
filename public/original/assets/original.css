@@ -1,7 +1,0 @@
-/* Demo-only additions to the copied pages: the snapshot strip, and the old
-   theme's fixed header made static so it stacks under the demo bar instead of
-   sliding beneath it. Scripts are stripped from the copy, so nothing else moves. */
-.pitch-strip{background:#111;color:#f5efe0;font:500 13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:10px 16px;text-align:center}
-.pitch-strip a{color:#83ba28}
-#top-header,#main-header{position:static !important;top:auto !important}
-#page-container{padding-top:0 !important}
