@@ -16,6 +16,7 @@ public/            everything served
   _redirects       old WordPress page addresses -> parts of the page
   robots.txt, sitemap.xml
 work/brief.json    every fact on the page and its source
+work/og-image.html source of the sharing thumbnail, public/assets/img/og.jpg
 prompt text/       the owner's prompt, reply and supplied files for the version in service
 wrangler.jsonc     assets-only config, no Worker script
 package.json       wrangler devDependency + dev/deploy/check scripts
@@ -102,3 +103,4 @@ stamps in every HTML file.
 | v1.5 | Gallery photos at their true size | Every gallery photo now sits at exactly its original size and shape, none bigger or smaller than another, arranged centrally with the sides left free. |
 | v1.6 | The real current site opens in a new tab | The copied old site has gone from the demo. Current site in the top bar, and a new button at the top of the Improvements page, now open Sonia's real website in a new tab, so the new site stays open to compare against, and all three tabs in the bar now fit on the smallest phones. |
 | v1.7 | A shorter page to scroll on phones | On a phone the home page is now less than half as long, about nine screens instead of twenty, with nothing taken out. Classes show one at a time with a button for each, every timetable session fits on two lines, the photos sit two to a row in their own shapes, and the venues line up in one row that swipes sideways. The Improvements page now shows each old phone screenshot beside its new one. |
+| v1.8 | A proper picture when the link is shared | Sharing a link to the new site now brings up a bold green card with Sonia's photo, her classes and her prices, sized to read clearly in a chat, and the Improvements page gets its own preview too. For now the picture shows in iMessage, Telegram and Slack; WhatsApp, Facebook and X will show it once the site is on her own domain. |

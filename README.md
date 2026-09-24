@@ -25,6 +25,7 @@ public/
   fonts/                    self-hosted Oswald and Open Sans (from @fontsource, OFL) + fonts.css
 work/
   brief.json                every fact on the page, where it came from, and what is unconfirmed
+  og-image.html             the source of the sharing thumbnail (see Editing the site)
 prompt text/                the owner's prompt, reply and supplied files for the version in service
 wrangler.jsonc              assets-only Worker config
 package.json                wrangler devDependency + dev/deploy/check scripts
@@ -40,7 +41,7 @@ On phones the page is laid out to keep scrolling short. The class tabs stay tabs
 
 While Sonia reviews the site, every page carries the `site-pitch` demo bar at the top with three tabs: **New site** (`/`), **Current site**, which opens her live WordPress site at www.getfitwithsonia.co.uk in a new tab so the new site stays open beside it, and **Improvements** (`/improvements/`), whose first section has a button that opens the live site in a new tab too. The review page is `noindex` and disallowed in `robots.txt`. Up to v1.5 the Current site tab showed a working copy of the old site at `/original/`; that copy was removed in v1.6, and `_redirects` sends any old link to it on to the live site with a temporary (302) redirect.
 
-To retire the demo chrome when the site goes live: remove the `demo-bar.css` link and the `#pitch-bar` nav from every page, delete `public/improvements/` (and the screenshots under `assets/img/improvements/`), drop the two `/original` lines from `_redirects` and the `/improvements/` disallow line from `robots.txt`, and in `site.css` remove the `.ext` rule (only the Improvements button uses it) and set the header back to `top: 0` and the anchor offsets back down by 48px.
+To retire the demo chrome when the site goes live: remove the `demo-bar.css` link and the `#pitch-bar` nav from every page, delete `public/improvements/` (and the screenshots under `assets/img/improvements/`), drop the two `/original` lines from `_redirects` and the `/improvements/` disallow line from `robots.txt`, set `og:image` in the head of `index.html` back to the full `https://www.getfitwithsonia.co.uk/assets/img/og.jpg?v=…` address, and in `site.css` remove the `.ext` rule (only the Improvements button uses it) and set the header back to `top: 0` and the anchor offsets back down by 48px.
 
 ## Local development
 
@@ -58,6 +59,7 @@ Or, with nothing installed: `python3 -m http.server -d public 8000`.
 - **Contact details.** The email and phone number appear in the hero, facts strip, timetable note, contact section, the pinned footer, the JSON-LD block, and every page under `login/`, `register/`, `improvements/` and `404.html`. Search for `sonia.tonge@gmail.com` and `447957971473`.
 - **Social links.** Contact section and the JSON-LD `sameAs` list. Instagram is not linked: the handle is unconfirmed (see `work/brief.json`).
 - **Gallery layout.** Every photo is shown at its own natural size and proportions, nothing enlarged, shrunk or cropped, in a centred flow whose rows fall where they fall. Below 720px the photos sit two to a row, each scaled down at its own ratio. Portrait originals will sit tall beside landscape ones.
+- **Sharing thumbnail.** `public/assets/img/og.jpg` (1200x630, under 100 KB) is the picture link previews show, declared by the `og:image` tags on the home page and the Improvements page. Its source is `work/og-image.html`, whose comment says how to regenerate it. While the site is on a temporary address the tags use a site-relative path, which iMessage, Telegram and Slack accept; WhatsApp, Facebook and X only show a picture for a full `https://` address, so switch to one at launch (Demo chrome above). Bump its `?v=` stamp whenever the image changes.
 - **Photos** live in `public/assets/img/`. The portrait has two sizes for `srcset`; gallery photos are the 400x284 thumbnails the old site served (the full-size originals are listed in `work/brief.json` and should replace them once supplied). Any photo wrapped in `<a class="zoom" data-group="…" href="large-image">` opens large when clicked; links in the same group step through each other with the arrows, and without JavaScript the link simply opens the image.
 - **Improvements page.** A review page for Sonia; Demo chrome above says how to retire it. The two "New" phone screenshots show the site as a visitor sees it, without the demo bar. Retake them at 390 by 844 when the phone layout changes, and bump the `?v=` stamp on their links.
 - **Cache stamp.** Everything under `assets/` and `fonts/` is cached for a year. When `site.css`, `demo-bar.css`, `site.js` or `fonts.css` changes, bump the `?v=` stamp on its links in every HTML file; a replaced image needs a stamp too.

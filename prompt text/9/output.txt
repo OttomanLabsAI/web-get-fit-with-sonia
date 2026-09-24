@@ -1,0 +1,14 @@
+v1.8 is released with the new sharing thumbnail. It is a dark green card with "Get fit with Sonia" big enough to read at chat size, her four main classes, £12 a class and 10 for £90, Sonia's photo at its true shape, and the six class colours along the bottom. The Improvements page now has its own preview too, titled "What's improved". As you chose, the picture is linked by a relative path, so it shows on your demo link in iMessage, Telegram and Slack. WhatsApp, Facebook and X only take a full web address, so they will show it once the site moves to getfitwithsonia.co.uk; switching the path back is on the launch list in the README.
+
+The price deck is here: [Website price deck for Sonia](https://claude.ai/artifact/BtYFYTNbLupyPaHeXRmHJC). It has six slides in her site's greens and type, with "Built by Fid Design Studio" on each:
+
+1. A cover showing her new site on a computer and a phone.
+2. The price: £500 for the site, one-off and hers outright, beside what others charge (£1,500–£8,000, struck through). Unlimited changes are three rows like Faye's rates: 1 week £20, 2 weeks £35, 4 weeks £50.
+3. Her domain: getfitwithsonia.co.uk, the address she already has. The site is live today on a temporary link for £0 and moves there when she says go.
+4. What she owns (the code, the hosting, the setup) and your four promises.
+5. How it is this cheap, in two lines.
+6. Say the word, with your studio's name and web address.
+
+The £500, the market range, the promises and the AI-agents line come from your pitch sheet. This environment's network policy blocks webdesign.basilicalabs.ai, so your credit is set in type rather than with your logo. Send me the logo file, or add that site to the allowed domains under Network access in the environment settings, and I will put it in. The deck stays private until you share it from its Share menu, and it downloads as PDF or PowerPoint.
+
+**Verified.** On both pages the preview tags resolve to the 93 KB, 1200 by 630 image under wrangler dev. The template now kept in the repo reproduces the image pixel for pixel, and it reads clearly at chat-preview size. The layout sweep is clean on all five pages at thirteen widths from 320px to 1920px, the HTML is valid, axe finds zero violations, and the wrangler dry run passes.
